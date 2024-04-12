@@ -1,0 +1,54 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "cityname": "Sao Paulo",
+            "avgScore": 8,
+            "country": "Brazil",
+            "continent": "South America",
+            "weather": [
+                {
+                    "temperature": [
+                        "min",
+                        "max",
+                        "avg"
+                    ],
+                    "humidity": [
+                        "min",
+                        "max",
+                        "avg"
+                    ]
+                }
+            ],
+            "costOfLiving": "2000€",
+            "picture": [
+                {
+                    "src": "https://.../image.png",
+                    "pictureName": "image"
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Fatma",
+            "email": "",
+            "password": 0,
+            "favoriteCities": [
+                "cityId1",
+                "cityId2"
+            ],
+            "createdDate": "yyyy-mm-dd hh:mm:ss"
+        }
+    ],
+    "reviews": [
+        {
+            "reviewId": 1,
+            "review": "It is a string",
+            "userId": 1,
+            "cityId": 1,
+            "score": 7
+        }
+    ]
+}
