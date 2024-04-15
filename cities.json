@@ -1,54 +1,103 @@
 {
-    "cities": [
+  "cities": [
+    {
+      "id": 1,
+      "cityname": "Sao Paulo",
+      "avgScore": 8,
+      "country": "Brazil",
+      "continent": "South America",
+      "weather": [
         {
-            "id": 1,
-            "cityname": "Sao Paulo",
-            "avgScore": 8,
-            "country": "Brazil",
-            "continent": "South America",
-            "weather": [
-                {
-                    "temperature": [
-                        "min",
-                        "max",
-                        "avg"
-                    ],
-                    "humidity": [
-                        "min",
-                        "max",
-                        "avg"
-                    ]
-                }
-            ],
-            "costOfLiving": "2000€",
-            "picture": [
-                {
-                    "src": "https://.../image.png",
-                    "pictureName": "image"
-                }
-            ]
+          "temperature": [16, 35, 24],
+          "humidity": [37, 55, 44]
         }
-    ],
-    "users": [
+      ],
+      "costOfLiving": 2000,
+      "picture": [
         {
-            "id": 1,
-            "name": "Fatma",
-            "email": "",
-            "password": 0,
-            "favoriteCities": [
-                "cityId1",
-                "cityId2"
-            ],
-            "createdDate": "yyyy-mm-dd hh:mm:ss"
+          "src": "https://.../image.png",
+          "pictureName": "image"
         }
-    ],
-    "reviews": [
+      ]
+    },
+    {
+      "id": 2,
+      "cityname": "Tokyo",
+      "avgScore": 9,
+      "country": "Japan",
+      "continent": "Asia",
+      "weather": [
         {
-            "reviewId": 1,
-            "review": "It is a string",
-            "userId": 1,
-            "cityId": 1,
-            "score": 7
+          "temperature": [5, 30, 18],
+          "humidity": [30, 70, 50]
         }
-    ]
+      ],
+      "costOfLiving": 2500,
+      "picture": [
+        {
+          "src": "https://.../tokyo_image.png",
+          "pictureName": "Tokyo View"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "cityname": "Paris",
+      "avgScore": 9,
+      "country": "France",
+      "continent": "Europe",
+      "weather": [
+        {
+          "temperature": [1, 25, 14],
+          "humidity": [50, 80, 65]
+        }
+      ],
+      "costOfLiving": 2200,
+      "picture": [
+        {
+          "src": "https://.../paris_image.png",
+          "pictureName": "Paris Scene"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "cityname": "Cape Town",
+      "avgScore": 8.5,
+      "country": "South Africa",
+      "continent": "Africa",
+      "weather": [
+        {
+          "temperature": [8, 28, 18],
+          "humidity": [40, 80, 60]
+        }
+      ],
+      "costOfLiving": 1800,
+      "picture": [
+        {
+          "src": "https://.../capetown_image.png",
+          "pictureName": "Cape Town Coast"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Fatma",
+      "email": "",
+      "password": 0,
+      "favoriteCities": ["cityId1", "cityId2"],
+      "createdDate": "yyyy-mm-dd hh:mm:ss"
+    }
+  ],
+  "reviews": [
+    {
+      "reviewId": 1,
+      "review": "It is a string",
+      "userId": 1,
+      "cityId": 1,
+      "score": 7
+    }
+  ]
 }
