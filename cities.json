@@ -9,22 +9,106 @@
             "weather": [
                 {
                     "temperature": [
-                        "min",
-                        "max",
-                        "avg"
+                        16,
+                        35,
+                        24
                     ],
                     "humidity": [
-                        "min",
-                        "max",
-                        "avg"
+                        37,
+                        55,
+                        44
                     ]
                 }
             ],
-            "costOfLiving": "2000€",
+            "costOfLiving": 2000,
             "picture": [
                 {
                     "src": "https://.../image.png",
                     "pictureName": "image"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "cityname": "Tokyo",
+            "avgScore": 9,
+            "country": "Japan",
+            "continent": "Asia",
+            "weather": [
+                {
+                    "temperature": [
+                        5,
+                        30,
+                        18
+                    ],
+                    "humidity": [
+                        30,
+                        70,
+                        50
+                    ]
+                }
+            ],
+            "costOfLiving": 2500,
+            "picture": [
+                {
+                    "src": "https://.../tokyo_image.png",
+                    "pictureName": "Tokyo View"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "cityname": "Paris",
+            "avgScore": 9,
+            "country": "France",
+            "continent": "Europe",
+            "weather": [
+                {
+                    "temperature": [
+                        1,
+                        25,
+                        14
+                    ],
+                    "humidity": [
+                        50,
+                        80,
+                        65
+                    ]
+                }
+            ],
+            "costOfLiving": 2200,
+            "picture": [
+                {
+                    "src": "https://.../paris_image.png",
+                    "pictureName": "Paris Scene"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "cityname": "Cape Town",
+            "avgScore": 8.5,
+            "country": "South Africa",
+            "continent": "Africa",
+            "weather": [
+                {
+                    "temperature": [
+                        8,
+                        28,
+                        18
+                    ],
+                    "humidity": [
+                        40,
+                        80,
+                        60
+                    ]
+                }
+            ],
+            "costOfLiving": 1800,
+            "picture": [
+                {
+                    "src": "https://.../capetown_image.png",
+                    "pictureName": "Cape Town Coast"
                 }
             ]
         }
@@ -40,17 +124,6 @@
                 "cityId2"
             ],
             "createdDate": "yyyy-mm-dd hh:mm:ss"
-        },
-        {
-            "id": 2,
-            "name": "Fabio",
-            "email": "",
-            "password": 1,
-            "favoriteCities": [
-                "cityId1",
-                "cityId2"
-            ],
-            "createdDate": "yyyy-mm-dd hh:mm:ss"
         }
     ],
     "reviews": [
@@ -60,13 +133,6 @@
             "userId": 1,
             "cityId": 1,
             "score": 7
-        },
-        {
-            "reviewId": 2,
-            "review": "It is a string",
-            "userId": 2,
-            "cityId": 2,
-            "score": 5
         }
     ]
 }
