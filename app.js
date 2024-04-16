@@ -48,6 +48,32 @@ server.patch("/cities/:id", (req, res) => {
   res.send(updatedCity);
 });
 
+server.post("/cities", (req, res) => {
+  const db = router.db; // Get the lowdb instance
+  const { cityname, avgScore, country, continent, weather } = req.body;
+
+  if (!cityname || !avgScore || !country || !continent || !weather) {
+    res.status(400).send("Missing required city attributes");
+    return;
+  }
+
+  // Assuming ID management (auto-increment) could be handled here
+  const lastCity = db.get("cities").last().value();
+  const id = lastCity ? lastCity.id + 1 : 1;
+
+  const newCity = {
+    id,
+    cityname,
+    avgScore,
+    country,
+    continent,
+    weather,
+  };
+
+  db.get("cities").push(newCity).write(); // Add the new city to the collection
+  res.status(201).send(newCity);
+});
+
 // Use the default router
 server.use(router);
 
