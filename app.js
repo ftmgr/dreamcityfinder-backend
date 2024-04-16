@@ -25,6 +25,32 @@ server.listen(PORT, () => {
   console.log(`JSON Server is running on http://localhost:${PORT}`);
 });
 
+server.patch("/cities/:id", (req, res) => {
+  const { id } = req.params;
+  const updates = req.body;
+  const db = router.db; // Get lowdb database
+  const city = db
+    .get("cities")
+    .find({ id: parseInt(id) })
+    .value();
+
+  if (!city) {
+    res.status(404).send({ message: "City not found" });
+    return;
+  }
+
+  const updatedCity = { ...city, ...updates };
+  db.get("cities")
+    .find({ id: parseInt(id) })
+    .assign(updatedCity)
+    .write();
+
+  res.send(updatedCity);
+});
+
+// Use the default router
+server.use(router);
+
 router.post("/users", async (req, res) => {
   const { name, email, password } = req.body;
   try {
