@@ -40,6 +40,17 @@
                 "cityId2"
             ],
             "createdDate": "yyyy-mm-dd hh:mm:ss"
+        },
+        {
+            "id": 2,
+            "name": "Fabio",
+            "email": "",
+            "password": 1,
+            "favoriteCities": [
+                "cityId1",
+                "cityId2"
+            ],
+            "createdDate": "yyyy-mm-dd hh:mm:ss"
         }
     ],
     "reviews": [
@@ -49,6 +60,13 @@
             "userId": 1,
             "cityId": 1,
             "score": 7
+        },
+        {
+            "reviewId": 2,
+            "review": "It is a string",
+            "userId": 2,
+            "cityId": 2,
+            "score": 5
         }
     ]
 }
