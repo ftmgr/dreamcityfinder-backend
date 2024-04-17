@@ -8,8 +8,16 @@
       "continent": "South America",
       "weather": [
         {
-          "temperature": [16, 35, 24],
-          "humidity": [37, 55, 44]
+          "temperature": [
+            16,
+            35,
+            24
+          ],
+          "humidity": [
+            37,
+            55,
+            44
+          ]
         }
       ],
       "costOfLiving": 2000,
@@ -23,13 +31,21 @@
     {
       "id": 2,
       "cityname": "Tokyo",
-      "avgScore": 9,
+      "avgScore": "7",
       "country": "Japan",
       "continent": "Asia",
       "weather": [
         {
-          "temperature": [5, 30, 18],
-          "humidity": [30, 70, 50]
+          "temperature": [
+            5,
+            30,
+            18
+          ],
+          "humidity": [
+            30,
+            70,
+            50
+          ]
         }
       ],
       "costOfLiving": 2500,
@@ -48,8 +64,16 @@
       "continent": "Europe",
       "weather": [
         {
-          "temperature": [1, 25, 14],
-          "humidity": [50, 80, 65]
+          "temperature": [
+            1,
+            25,
+            14
+          ],
+          "humidity": [
+            50,
+            80,
+            65
+          ]
         }
       ],
       "costOfLiving": 2200,
@@ -68,8 +92,16 @@
       "continent": "Africa",
       "weather": [
         {
-          "temperature": [8, 28, 18],
-          "humidity": [40, 80, 60]
+          "temperature": [
+            8,
+            28,
+            18
+          ],
+          "humidity": [
+            40,
+            80,
+            60
+          ]
         }
       ],
       "costOfLiving": 1800,
@@ -79,6 +111,77 @@
           "pictureName": "Cape Town Coast"
         }
       ]
+    },
+    {
+      "cityname": "Berlin",
+      "avgScore": 8,
+      "country": "Germany",
+      "continent": "Europe",
+      "costOfLiving": 3000,
+      "weather": [],
+      "picture": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29.jpg/1200px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29.jpg",
+          "pictureName": "Berlin image"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "cityname": "Madrid",
+      "avgScore": 7,
+      "country": "Spain",
+      "continent": "Europe",
+      "costOfLiving": 2300,
+      "weather": [
+        {
+          "temperature": [
+            10,
+            35,
+            22
+          ],
+          "humidity": [
+            30,
+            50,
+            33
+          ]
+        }
+      ],
+      "picture": [
+        {
+          "src": "https://content.r9cdn.net/rimg/dimg/5f/38/353ec907-ap-MAD-551b0685.jpg?width=1366&height=768&xhint=826&yhint=409&crop=true",
+          "pictureName": "Madrid image"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "cityname": "Istanbul",
+      "avgScore": 7,
+      "country": "Türkiye",
+      "continent": "Asia",
+      "costOfLiving": 1000,
+      "weather": [
+        {
+          "temperature": [
+            10,
+            35,
+            21
+          ],
+          "humidity": [
+            45,
+            55,
+            50
+          ]
+        }
+      ],
+      "picture": [
+        {
+          "src": "https://media.timeout.com/images/105859738/750/422/image.jpg",
+          "pictureName": "Istambul image"
+        }
+      ],
+      "id": 7
     }
   ],
   "users": [
@@ -87,7 +190,10 @@
       "name": "Fatma",
       "email": "",
       "password": 0,
-      "favoriteCities": ["cityId1", "cityId2"],
+      "favoriteCities": [
+        "cityId1",
+        "cityId2"
+      ],
       "createdDate": "yyyy-mm-dd hh:mm:ss"
     }
   ],
