@@ -25,7 +25,7 @@ server.listen(PORT, () => {
 	console.log(`JSON Server is running on http://localhost:${PORT}`);
 });
 
-router.post('/users', async (req, res) => {
+router.post('/register', async (req, res) => {
 	const { name, email, password } = req.body;
 	try {
 		// Read users from the JSON file
