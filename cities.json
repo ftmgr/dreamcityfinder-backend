@@ -191,6 +191,20 @@
       "email": "",
       "password": 0,
       "terms": true
+    },
+    {
+      "name": "Fabio",
+      "email": "fabiotest@gmail.com",
+      "password": "123456",
+      "terms": true,
+      "id": 2
+    },
+    {
+      "name": "Fabio 2",
+      "email": "fabio2@gmail.com",
+      "password": "12345676",
+      "terms": true,
+      "id": 3
     }
   ],
   "reviews": [
