@@ -74,10 +74,31 @@ server.post("/cities", (req, res) => {
 	res.status(201).send(newCity);
 });
 
-// Use the default router
-server.use(router);
+server.post("/users", (req, res) => {
+	const db = router.db; // Get the lowdb instance
+	const { name, email, password } = req.body;
 
-router.post("/users", async (req, res) => {
+	if (!name || !email || !password) {
+		res.status(400).send("Missing required city attributes");
+		return;
+	}
+
+	// Assuming ID management (auto-increment) could be handled here
+	const lastUser = db.get("users").last().value();
+	const id = lastUser ? lastUser.id + 1 : 1;
+
+	const newUser = {
+		id,
+		name,
+		email,
+		password,
+	};
+
+	db.get("users").push(newUser).write(); // Add the new city to the collection
+	res.status(201).send(newUser);
+});
+
+/*router.post("/register", async (req, res) => {
 	const { name, email, password } = req.body;
 	try {
 		// Read users from the JSON file
@@ -102,4 +123,4 @@ router.post("/users", async (req, res) => {
 		console.error(error);
 		res.status(500).json({ message: "Server error" });
 	}
-});
+}); */
