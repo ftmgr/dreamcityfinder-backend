@@ -190,11 +190,7 @@
       "name": "Fatma",
       "email": "",
       "password": 0,
-      "favoriteCities": [
-        "cityId1",
-        "cityId2"
-      ],
-      "createdDate": "yyyy-mm-dd hh:mm:ss"
+      "terms": true
     }
   ],
   "reviews": [
