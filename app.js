@@ -76,10 +76,10 @@ server.post("/cities", (req, res) => {
 
 server.post("/users", (req, res) => {
 	const db = router.db; // Get the lowdb instance
-	const { name, email, password } = req.body;
+	const { name, email, password, terms } = req.body;
 
-	if (!name || !email || !password) {
-		res.status(400).send("Missing required city attributes");
+	if (!name || !email || !password || !terms) {
+		res.status(400).send("Missing required user attributes");
 		return;
 	}
 
@@ -92,35 +92,9 @@ server.post("/users", (req, res) => {
 		name,
 		email,
 		password,
+		terms,
 	};
 
-	db.get("users").push(newUser).write(); // Add the new city to the collection
+	db.get("users").push(newUser).write(); // Add the new user to the collection
 	res.status(201).send(newUser);
 });
-
-/*router.post("/register", async (req, res) => {
-	const { name, email, password } = req.body;
-	try {
-		// Read users from the JSON file
-		const data = JSON.parse(fs.readFileSync(USERS_FILE_PATH, "utf8"));
-		// Check if the email already exists
-		const usersData = data.users;
-		const existingUser = usersData.find((user) => user.email === email);
-		if (existingUser) {
-			return res.status(400).json({ message: "Email already exists" });
-		}
-		// Add the new user to the array
-		const newUser = { name, email, password };
-		usersData.push(newUser);
-		// Write updated users data back to the JSON file
-		fs.writeFileSync(
-			USERS_FILE_PATH,
-			JSON.stringify(usersData, null, 2),
-			"utf8"
-		);
-		res.status(201).json({ message: "User registered successfully" });
-	} catch (error) {
-		console.error(error);
-		res.status(500).json({ message: "Server error" });
-	}
-}); */
